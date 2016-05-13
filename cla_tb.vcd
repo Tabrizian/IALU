@@ -1,0 +1,187 @@
+$date
+  Fri May 13 20:08:44 2016
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$var reg 8 ! a[7:0] $end
+$var reg 8 " b[7:0] $end
+$var reg 8 # res[7:0] $end
+$var reg 1 $ carry_in $end
+$var reg 1 % carry_out $end
+$scope module mapping $end
+$var reg 8 & a[7:0] $end
+$var reg 8 ' b[7:0] $end
+$var reg 1 ( carry_in $end
+$var reg 1 ) carry_out $end
+$var reg 8 * res[7:0] $end
+$var reg 1 + mid_cout $end
+$scope module cla1 $end
+$var reg 4 , a[3:0] $end
+$var reg 4 - b[3:0] $end
+$var reg 1 . carry_in $end
+$var reg 1 / carry_out $end
+$var reg 4 0 res[3:0] $end
+$var reg 4 1 p[3:0] $end
+$var reg 4 2 g[3:0] $end
+$var reg 3 3 carry[2:0] $end
+$scope module pi_gi $end
+$var reg 4 4 a[3:0] $end
+$var reg 4 5 b[3:0] $end
+$var reg 4 6 p[3:0] $end
+$var reg 4 7 g[3:0] $end
+$scope module (0) $end
+$scope module pi_gi $end
+$var reg 1 8 a $end
+$var reg 1 9 b $end
+$var reg 1 : p $end
+$var reg 1 ; g $end
+$upscope $end
+$upscope $end
+$scope module (1) $end
+$scope module pi_gi $end
+$var reg 1 < a $end
+$var reg 1 = b $end
+$var reg 1 > p $end
+$var reg 1 ? g $end
+$upscope $end
+$upscope $end
+$scope module (2) $end
+$scope module pi_gi $end
+$var reg 1 @ a $end
+$var reg 1 A b $end
+$var reg 1 B p $end
+$var reg 1 C g $end
+$upscope $end
+$upscope $end
+$scope module (3) $end
+$scope module pi_gi $end
+$var reg 1 D a $end
+$var reg 1 E b $end
+$var reg 1 F p $end
+$var reg 1 G g $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module cla2 $end
+$var reg 4 H a[3:0] $end
+$var reg 4 I b[3:0] $end
+$var reg 1 J carry_in $end
+$var reg 1 K carry_out $end
+$var reg 4 L res[3:0] $end
+$var reg 4 M p[3:0] $end
+$var reg 4 N g[3:0] $end
+$var reg 3 O carry[2:0] $end
+$scope module pi_gi $end
+$var reg 4 P a[3:0] $end
+$var reg 4 Q b[3:0] $end
+$var reg 4 R p[3:0] $end
+$var reg 4 S g[3:0] $end
+$scope module (0) $end
+$scope module pi_gi $end
+$var reg 1 T a $end
+$var reg 1 U b $end
+$var reg 1 V p $end
+$var reg 1 W g $end
+$upscope $end
+$upscope $end
+$scope module (1) $end
+$scope module pi_gi $end
+$var reg 1 X a $end
+$var reg 1 Y b $end
+$var reg 1 Z p $end
+$var reg 1 [ g $end
+$upscope $end
+$upscope $end
+$scope module (2) $end
+$scope module pi_gi $end
+$var reg 1 \ a $end
+$var reg 1 ] b $end
+$var reg 1 ^ p $end
+$var reg 1 _ g $end
+$upscope $end
+$upscope $end
+$scope module (3) $end
+$scope module pi_gi $end
+$var reg 1 ` a $end
+$var reg 1 a b $end
+$var reg 1 b p $end
+$var reg 1 c g $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+b00000101 !
+b00000101 "
+b00001010 #
+0$
+0%
+b00000101 &
+b00000101 '
+0(
+0)
+b00001010 *
+0+
+b0101 ,
+b0101 -
+0.
+0/
+b1010 0
+b0000 1
+b0101 2
+b101 3
+b0101 4
+b0101 5
+b0000 6
+b0101 7
+18
+19
+0:
+1;
+0<
+0=
+0>
+0?
+1@
+1A
+0B
+1C
+0D
+0E
+0F
+0G
+b0000 H
+b0000 I
+0J
+0K
+b0000 L
+b0000 M
+b0000 N
+b000 O
+b0000 P
+b0000 Q
+b0000 R
+b0000 S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+0`
+0a
+0b
+0c

@@ -7,13 +7,13 @@ FILES = $(SRCDIR)/and_eight.vhd $(SRCDIR)/carry_look_ahead_adder.vhd \
 		$(SRCDIR)/multiplier_four.vhd $(SRCDIR)/or_eight.vhd \
 		$(SRCDIR)/pi_gi_generator.vhd $(SRCDIR)/pi_gi_generator_8.vhd \
 		$(SRCDIR)/ripple_sixteen_adder.vhd $(SRCDIR)/xnor_eight.vhd \
-		$(SRCDIR)/xor_eight.vhd
+		$(SRCDIR)/xor_eight.vhd $(SRCDIR)/cla.vhd
 
 # Testbench
 TESTDIR = test
-TESTFILES = $(TESTDIR)/carry_look_ahead_adder_tb.vhd
+TESTFILES = $(TESTDIR)/carry_look_ahead_adder_tb.vhd $(TESTDIR)/cla_tb.vhd
 SUFFIX = _out# Suffix of files created using -e option
-MODULE = carry_look_ahead_adder_tb# Show wave of this module
+MODULE = cla_tb# Show wave of this module
 STOPTIME = 3500ns
 
 # Run
