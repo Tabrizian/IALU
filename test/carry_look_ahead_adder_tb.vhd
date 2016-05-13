@@ -21,6 +21,7 @@ architecture test_bench of carry_look_ahead_adder_tb is
 begin
     mapping : carry_look_ahead_adder port map(a, b, carry_in, carry_out, res);
 
+    carry_in <= '0';
     a <= "0010";
     b <= "0001";
 end test_bench;
