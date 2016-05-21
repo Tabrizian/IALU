@@ -11,5 +11,5 @@ end sar_eight;
 
 architecture gate_level of sar_eight is
 begin
-    output(7 downto 0) <= input(7) & input(7 downto 1);
+    output(7 downto 0) <= "0" & input(6 downto 0);
 end gate_level;
