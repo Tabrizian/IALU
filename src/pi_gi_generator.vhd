@@ -14,6 +14,6 @@ end entity;
 
 architecture gate_level of pi_gi_generator is
 begin
-    p <= a xor b;
+    p <= ((a xor b) and (not command)) or (((not a) or b) and (command));
     g <= (a and b and (not command)) or ((not a) and b and command);
 end gate_level;
