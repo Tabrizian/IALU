@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity cla_adder is
+entity cla is
     port(
             a : in STD_LOGIC_VECTOR(7 downto 0);
             b : in STD_LOGIC_VECTOR(7 downto 0);
@@ -13,7 +13,7 @@ entity cla_adder is
         );
 end entity;
 
-architecture gate_level of cla_adder is
+architecture gate_level of cla is
     component carry_look_ahead_adder is
         port(
                 a : in STD_LOGIC_VECTOR(3 downto 0);
