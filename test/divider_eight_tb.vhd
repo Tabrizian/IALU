@@ -10,13 +10,13 @@ architecture test_bench of divider_eight_tb is
         port(
                 a : in STD_LOGIC_VECTOR(7 downto 0);
                 b : in STD_LOGIC_VECTOR(7 downto 0);
-                res : out STD_LOGIC_VECTOR(3 downto 0);
+                res : out STD_LOGIC_VECTOR(7 downto 0);
                 ovf : out STD_LOGIC
             );
     end component;
     signal a : STD_LOGIC_VECTOR(7 downto 0);
     signal b : STD_LOGIC_VECTOR(7 downto 0);
-    signal res : STD_LOGIC_VECTOR(3 downto 0);
+    signal res : STD_LOGIC_VECTOR(7 downto 0);
     signal ovf : STD_LOGIC;
 begin
     a <= "00001111";
