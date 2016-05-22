@@ -6,6 +6,7 @@ entity pi_gi_generator_4 is
     port(
             a : in STD_LOGIC_VECTOR(3 downto 0);
             b : in STD_LOGIC_VECTOR(3 downto 0);
+            command : in STD_LOGIC;
             p : out STD_LOGIC_VECTOR(3 downto 0);
             g : out STD_LOGIC_VECTOR(3 downto 0)
         );
@@ -16,6 +17,7 @@ architecture gate_level of pi_gi_generator_4 is
         port(
                 a : in STD_LOGIC;
                 b : in STD_LOGIC;
+                command : in STD_LOGIC;
                 p : out STD_LOGIC;
                 g : out STD_LOGIC
             );
@@ -23,6 +25,6 @@ architecture gate_level of pi_gi_generator_4 is
 begin
     GENEREATE_PI_GI:
     for i in 0 to 3 generate
-        pi_gi : pi_gi_generator port map(a(i), b(i), p(i), g(i));
+        pi_gi : pi_gi_generator port map(a(i), b(i), command, p(i), g(i));
     end generate GENEREATE_PI_GI;
 end gate_level;
