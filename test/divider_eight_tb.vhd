@@ -20,7 +20,7 @@ architecture test_bench of divider_eight_tb is
     signal ovf : STD_LOGIC;
 begin
     a <= "00001111";
-    b <= "00001100", "11110000" after 2 ns;
+    b <= "11100000", "11100000" after 1 ns;
     mapping : divider_eight port map(a, b, res, ovf);
 
 end test_bench;

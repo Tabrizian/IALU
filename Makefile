@@ -16,7 +16,7 @@ TESTFILES = $(TESTDIR)/carry_look_ahead_tb.vhd $(TESTDIR)/cla_tb.vhd \
 			$(TESTDIR)/full_subtractor_tb.vhd  $(TESTDIR)/divider_eight_tb.vhd\
 		   	$(TESTDIR)/select_subtractor_tb.vhd
 SUFFIX = _out# Suffix of files created using -e option
-MODULE = cla_tb# Show wave of this module
+MODULE = divider_eight_tb# Show wave of this module
 STOPTIME = 3500ns
 
 # Run

@@ -27,6 +27,6 @@ architecture gate_level of select_subtractor is
 begin
     cla_inst : cla port map( a, b, '1', '0', carry_out, subtract);
     res <= a when carry_out = '1' else
-           subtract when carry_out = '1';
+           subtract when carry_out = '0';
     bout <= carry_out;
 end gate_level;
