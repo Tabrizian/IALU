@@ -1,7 +1,7 @@
 #
 #VHDL files
 SRCDIR = src
-FILES = $(SRCDIR)/and_eight.vhd $(SRCDIR)/carry_look_ahead_adder.vhd \
+FILES = $(SRCDIR)/and_eight.vhd $(SRCDIR)/carry_look_ahead.vhd \
 		$(SRCDIR)/controller.vhd $(SRCDIR)/full_adder.vhd \
 		$(SRCDIR)/half_adder.vhd $(SRCDIR)/multiplier_eight.vhd \
 		$(SRCDIR)/multiplier_four.vhd $(SRCDIR)/or_eight.vhd \
