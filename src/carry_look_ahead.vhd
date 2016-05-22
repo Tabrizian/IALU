@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity carry_look_ahead_adder is
+entity carry_look_ahead is
     port(
             a : in STD_LOGIC_VECTOR(3 downto 0);
             b : in STD_LOGIC_VECTOR(3 downto 0);
@@ -11,9 +11,9 @@ entity carry_look_ahead_adder is
             carry_out : out STD_LOGIC;
             res : out STD_LOGIC_VECTOR(3 downto 0)
         );
-end carry_look_ahead_adder;
+end carry_look_ahead;
 
-architecture gate_level of carry_look_ahead_adder is
+architecture gate_level of carry_look_ahead is
     component pi_gi_generator_4 is
         port(
                 a : in STD_LOGIC_VECTOR(3 downto 0);
