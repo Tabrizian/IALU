@@ -17,7 +17,9 @@ architecture test_bench of full_subtractor_tb is
     end component;
     signal a, b, bin : STD_LOGIC;
     signal arr : STD_LOGIC_VECTOR(2 downto 0);
+    signal sub, bout : STD_LOGIC;
 begin
+    mapping : full_subtractor port map(arr(1), arr(0), arr(2), bout, sub);
     bin <= arr(2);
     a   <= arr(1);
     b   <= arr(0);
