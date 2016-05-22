@@ -10,18 +10,19 @@ architecture test_bench of cla_tb is
         port(
                 a : in STD_LOGIC_VECTOR(7 downto 0);
                 b : in STD_LOGIC_VECTOR(7 downto 0);
+                command : in STD_LOGIC;
                 carry_in : in STD_LOGIC;
                 carry_out : out STD_LOGIC;
                 res : out STD_LOGIC_VECTOR(7 downto 0)
             );
     end component;
-
     signal a, b, res : STD_LOGIC_VECTOR(7 downto 0);
-    signal carry_in, carry_out : STD_LOGIC;
-begin
-    mapping : cla port map(a, b, carry_in, carry_out, res);
+    signal command, carry_in, carry_out : STD_LOGIC;
 
-    a <= "00000101";
-    b <= "00000101";
+begin
+    a <= "00001111";
+    b <= "00001100";
+    command <= '1', '0' after 1 ns;
     carry_in <= '0';
+    mapping : cla port map(a, b, command, carry_in, carry_out, res);
 end test_bench;

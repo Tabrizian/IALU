@@ -7,15 +7,16 @@ FILES = $(SRCDIR)/and_eight.vhd $(SRCDIR)/carry_look_ahead.vhd \
 		$(SRCDIR)/multiplier_four.vhd $(SRCDIR)/or_eight.vhd \
 		$(SRCDIR)/pi_gi_generator.vhd $(SRCDIR)/pi_gi_generator_8.vhd \
 		$(SRCDIR)/xnor_eight.vhd $(SRCDIR)/select_subtractor.vhd \
-		$(SRCDIR)/xor_eight.vhd $(SRCDIR)/cla.vhd $(SRCDIR)/full_subtractor.vhd
+		$(SRCDIR)/xor_eight.vhd $(SRCDIR)/cla.vhd \
+		$(SRCDIR)/full_subtractor.vhd $(SRCDIR)/divider_eight.vhd
 
 # Testbench
 TESTDIR = test
 TESTFILES = $(TESTDIR)/carry_look_ahead_tb.vhd $(TESTDIR)/cla_tb.vhd \
-			$(TESTDIR)/full_subtractor_tb.vhd \
+			$(TESTDIR)/full_subtractor_tb.vhd  $(TESTDIR)/divider_eight_tb.vhd\
 		   	$(TESTDIR)/select_subtractor_tb.vhd
 SUFFIX = _out# Suffix of files created using -e option
-MODULE = select_subtractor_tb# Show wave of this module
+MODULE = cla_tb# Show wave of this module
 STOPTIME = 3500ns
 
 # Run
