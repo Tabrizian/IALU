@@ -3,10 +3,11 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 entity array_multiplier is
-    port(a : in STD_LOGIC_VECTOR(3 downto 0);
-         b : in STD_LOGIC_VECTOR(3 downto 0);
-         ans : out STD_LOGIC_VECTOR(7 downto 0)
-     );
+    port(
+            a : in STD_LOGIC_VECTOR(3 downto 0);
+            b : in STD_LOGIC_VECTOR(3 downto 0);
+            ans : out STD_LOGIC_VECTOR(7 downto 0)
+        );
 end array_multiplier;
 
 architecture dataflow of array_multiplier is
