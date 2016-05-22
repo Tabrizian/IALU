@@ -35,15 +35,15 @@ architecture gate_level of divider_eight is
     signal b1 : STD_LOGIC_VECTOR(7 downto 0);
 begin
 
-    a1 <= a(7 downto 4) & "0000";
-    b1 <= "0000" &  b(7 downto 4) ;
+    a1 <= "0000" & a(7 downto 4);
+    b1 <= "0000" & b(7 downto 4) ;
     ss1 : select_subtractor port map(a1 , b1, res1, ovf);
-    a2 <= res1(7 downto 4) & a(3) & "000";
+    a2 <= "000" & res1(3 downto 0) & a(3);
     ss2 : select_subtractor port map(a2 , b1, res2, res(3));
-    a3 <= res2(7 downto 3) & a(2) & "00";
+    a3 <= "00" & res2(4 downto 0) & a(2);
     ss3 : select_subtractor port map(a3 , b1, res3, res(2));
-    a4 <= res3(7 downto 2) & a(1) & '0';
+    a4 <= '0' & res3(5 downto 0) & a(1);
     ss4 : select_subtractor port map(a4 , b1, res4, res(1));
-    a5 <= res4(7 downto 1) & a(0);
+    a5 <= res4(6 downto 0) & a(0);
     ss5 : select_subtractor port map(a5 , b1, res5, res(0));
 end gate_level;
