@@ -9,7 +9,8 @@ entity controller is
             control : in STD_LOGIC_VECTOR(2 downto 0);
             overflow_flag : out STD_LOGIC;
             zero_flag : out STD_LOGIC;
-            sign_flag : out STD_LOGIC
+            sign_flag : out STD_LOGIC;
+            res : out STD_LOGIC_VECTOR(7 downto 0)
         );
 end entity;
 
@@ -72,5 +73,15 @@ architecture gate_level of controller is
              ans : out STD_LOGIC_VECTOR(7 downto 0)
          );
     end component;
+
+
+    signal ors, ands, multplies, dividers, clas, sals, sars :
+        STD_LOGIC_VECTOR(7 downto 0);
+    signal div_ovf : STD_LOGIC;
 begin
+    or_er : or_eight port map(a, b, ors);
+    and_er : and_eight port map(a, b, ands);
+    divid_er : divider_eight port map(a, b, dividers, div_ovf);
+    multpli_er : array_multiplier port map(a(7 downto 4), b(7 downto 4),
+        multplies);
 end gate_level;
