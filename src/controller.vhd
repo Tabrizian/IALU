@@ -50,7 +50,7 @@ architecture gate_level of controller is
         port(
                 a : in STD_LOGIC_VECTOR(7 downto 0);
                 b : in STD_LOGIC_VECTOR(7 downto 0);
-                command : in STD_LOGIC;
+                control : in STD_LOGIC;
                 carry_in : in STD_LOGIC;
                 carry_out : out STD_LOGIC;
                 res : out STD_LOGIC_VECTOR(7 downto 0)
@@ -77,11 +77,28 @@ architecture gate_level of controller is
 
     signal ors, ands, multplies, dividers, clas, sals, sars :
         STD_LOGIC_VECTOR(7 downto 0);
-    signal div_ovf : STD_LOGIC;
+    signal div_ovf, cla_control : STD_LOGIC;
+    signal cla_out : STD_LOGIC;
 begin
     or_er : or_eight port map(a, b, ors);
     and_er : and_eight port map(a, b, ands);
     divid_er : divider_eight port map(a, b, dividers, div_ovf);
     multpli_er : array_multiplier port map(a(7 downto 4), b(7 downto 4),
         multplies);
+    cla_er : cla port map(a, b, cla_control, '0', cla_out, clas);
+    slr_er : slr_eight port map(a, sals);
+    sar_er : sar_eight port map(a, sars);
+
+    res <= clas when control = "000" else
+           clas when control = "001" else
+           multplies when control = "010" else
+           dividers when control = "011" else
+           sals when control = "100" else
+           sars when control = "101" else
+           ands when control = "110" else
+           ors when control = "111";
+
+    cla_control <= '1' when control = "000" else
+                   '0' when control = "001";
+
 end gate_level;
