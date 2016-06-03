@@ -79,6 +79,7 @@ architecture gate_level of controller is
         STD_LOGIC_VECTOR(7 downto 0);
     signal div_ovf, cla_control : STD_LOGIC;
     signal cla_out : STD_LOGIC;
+    signal res_readable : STD_LOGIC_VECTOR(7 downto 0);
 begin
     or_er : or_eight port map(a, b, ors);
     and_er : and_eight port map(a, b, ands);
@@ -89,7 +90,7 @@ begin
     slr_er : slr_eight port map(a, sals);
     sar_er : sar_eight port map(a, sars);
 
-    res <= clas when control = "000" else
+    res_readable <= clas when control = "000" else
            clas when control = "001" else
            multplies when control = "010" else
            dividers when control = "011" else
@@ -100,5 +101,16 @@ begin
 
     cla_control <= '0' when control = "000" else
                    '1' when control = "001";
+    zero_flag <= not (res_readable(0) or res_readable(1) or res_readable(2) or
+                 res_readable(3) or res_readable(4) or res_readable(5) or
+                 res_readable(6) or res_readable(7));
+    overflow_flag <= div_ovf when control = "011" else
+                     cla_out when control = "000" else
+                     cla_out when control = "001" else
+                     '0';
+    sign_flag <= cla_out when control = "011" else
+                 '0';
+
+    res <= res_readable;
 
 end gate_level;
