@@ -50,7 +50,7 @@ architecture gate_level of controller is
         port(
                 a : in STD_LOGIC_VECTOR(7 downto 0);
                 b : in STD_LOGIC_VECTOR(7 downto 0);
-                control : in STD_LOGIC;
+                command : in STD_LOGIC;
                 carry_in : in STD_LOGIC;
                 carry_out : out STD_LOGIC;
                 res : out STD_LOGIC_VECTOR(7 downto 0)

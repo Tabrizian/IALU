@@ -8,15 +8,17 @@ FILES = $(SRCDIR)/and_eight.vhd $(SRCDIR)/carry_look_ahead.vhd \
 		$(SRCDIR)/pi_gi_generator.vhd $(SRCDIR)/pi_gi_generator_8.vhd \
 		$(SRCDIR)/xnor_eight.vhd $(SRCDIR)/select_subtractor.vhd \
 		$(SRCDIR)/xor_eight.vhd $(SRCDIR)/cla.vhd \
-		$(SRCDIR)/full_subtractor.vhd $(SRCDIR)/divider_eight.vhd
+		$(SRCDIR)/full_subtractor.vhd $(SRCDIR)/divider_eight.vhd \
+		$(SRCDIR)/controller.vhd $(SRCDIR)/sar_eight.vhd \
+		$(SRCDIR)/slr_eight.vhd
 
 # Testbench
 TESTDIR = test
 TESTFILES = $(TESTDIR)/carry_look_ahead_tb.vhd $(TESTDIR)/cla_tb.vhd \
 			$(TESTDIR)/full_subtractor_tb.vhd  $(TESTDIR)/divider_eight_tb.vhd\
-		   	$(TESTDIR)/select_subtractor_tb.vhd
+		   	$(TESTDIR)/select_subtractor_tb.vhd $(TESTDIR)/controller_tb.vhd
 SUFFIX = _out# Suffix of files created using -e option
-MODULE = divider_eight_tb# Show wave of this module
+MODULE = controller_tb# Show wave of this module
 STOPTIME = 3500ns
 
 # Run
