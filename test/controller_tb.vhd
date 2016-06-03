@@ -25,8 +25,8 @@ begin
     mapping : controller port map (a, b, control, overflow_flag, zero_flag,
     sign_flag, res);
 
-    a <= "11110000";
-    b <= "00000001";
+    a <= "01110000";
+    b <= "00010000";
     control <= "000", "001" after 1 ns, "010" after 2 ns, "011" after 3 ns,
                "100" after 4 ns, "101" after 5 ns, "110" after 6 ns,
                "111" after 7 ns;
