@@ -98,7 +98,7 @@ begin
            ands when control = "110" else
            ors when control = "111";
 
-    cla_control <= '1' when control = "000" else
-                   '0' when control = "001";
+    cla_control <= '0' when control = "000" else
+                   '1' when control = "001";
 
 end gate_level;
