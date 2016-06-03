@@ -108,7 +108,7 @@ begin
                      cla_out when control = "000" else
                      cla_out when control = "001" else
                      '0';
-    sign_flag <= cla_out when control = "011" else
+    sign_flag <= cla_out when control = "001" else
                  '0';
 
     res <= res_readable;
